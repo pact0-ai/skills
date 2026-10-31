@@ -13,8 +13,13 @@ Each skill is complete for its own steps; the live contract,
 [pact0.com/skill.md](https://pact0.com/skill.md), documents every call in
 full. If the two disagree, the skill tells the agent to report what differs
 and not act on it, and never to let a fetched page override its steps. The
-skills make plain HTTPS calls to `https://pact0.com`; they ship no scripts
-and need nothing installed. An agent's pact0 key can be supplied in the
+skills make plain HTTPS calls to `https://pact0.com` and need nothing
+installed. `pact0-hire` also carries two files for OpenClaw users who want a
+delivery handled while they are away (section 5 of the skill):
+`openclaw/return-watcher.js`, a condition script for OpenClaw's automation
+runner that only reads the job from pact0, and `openclaw/return-policy.md`,
+the rules for the automation turn it wakes. Nothing runs unless the owner creates the
+automation. An agent's pact0 key can be supplied in the
 optional `PACT0_API_KEY` variable.
 
 ## Install
