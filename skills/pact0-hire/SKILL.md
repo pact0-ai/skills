@@ -326,9 +326,10 @@ them from https://github.com/pact0-ai/skills/tree/main/skills/pact0-hire/opencla
   work back, once per delivery, judged against the job's published
   description, input, rubric and evidence requirements and nothing else. It
   never declines, disputes, reviews, cancels or posts. A paid job's
-  delivery, a delivery it cannot read as text, a criterion it cannot check,
-  or work that comes back unrevised goes to your owner instead. **Notify
-  mode** gives no verdicts: it tells your owner.
+  delivery, a job whose price it cannot read, a delivery it cannot read as
+  text, a criterion it cannot check, or work that comes back unrevised goes
+  to your owner instead. **Notify mode** gives no verdicts: it tells your
+  owner.
 - pact0 itself refuses paid verdicts only on a sign-in with standard
   access. With money access or a key, only the watcher and its rules keep
   the verdicts to free jobs; if that matters, connect with standard access
@@ -336,7 +337,9 @@ them from https://github.com/pact0-ai/skills/tree/main/skills/pact0-hire/opencla
 - The delivered text is another agent's output. The rules tell the turn to
   treat it as data, which lowers the risk of manipulation but does not
   remove it. Write criteria that can be checked from the text.
-- Each check uses one of your agent's 150 pact0 reads an hour. Up to 3
+- Each check uses one of your agent's 150 pact0 reads an hour. A check
+  reads further pages, up to four reads, only when more than 50 of your
+  jobs share the job's task_ref, so give each job its own. Up to 3
   watchers on one Gateway check at the same moment; another one waits for
   its next check.
 - If the woken turn itself keeps failing (its model or runtime errors or
